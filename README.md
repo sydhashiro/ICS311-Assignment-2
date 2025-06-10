@@ -1,8 +1,8 @@
 # ʻŌlelo Noʻeau Dictionary – Balanced Tree Implementation
 
-**ICS 311 - Assignment 2: Balanced Trees**
-**Sydney Hashiro**
-**Ka'ili Benavente**
+#### ICS 311 - Assignment 2: Balanced Trees
+#### Sydney Hashiro
+#### Ka'ili Benavente
 
 ## Project Overview
 
