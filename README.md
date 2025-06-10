@@ -50,3 +50,11 @@ The `Saying` class implements `Comparable` to allow Unicode-aware sorting by the
 - Search for sayings by exact Hawaiian phrase
 - Retrieve first, last, predecessor, and successor in alphabetical order
 - Search sayings by Hawaiian or English word (substring match)
+
+## Sample Output
+- Ua ola loko i ke aloha = Love gives life within.
+- I ola no ke kino i ka mā‘ona o ka ‘ōpū = The body enjoys health when the stomach is well filled.
+- I pa‘a ke kino o ke keiki i ka lā‘au = That the body of the child be solidly built by the medicines.
+- Ka lā i ka Mauliola = The sun at the source of life.
+- Mai ka piko o ke po‘o a ka poli o ka wāwae, a l’a ma na kihi ‘ehā o ke kino = From the crown of the head to the soles of the feet, and the four corners of the body.
+- Pū‘ali kalo i ka we ‘ole = Taro, for lack of water, grows misshapen.
