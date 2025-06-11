@@ -26,6 +26,18 @@ We uesed a Java `TreeSet<Saying>` for our core storage structure. This is backed
 
 The `Saying` class implements `Comparable` to allow Unicode-aware sorting by the Hawaiian phrase. Word-based searches are done by splitting the text and comparing individual words.
 
+## Why Our Data Structure Is Efficient
+
+We use Java’s `TreeSet`, which uses a Red-Black Tree, a type of self-balancing binary search tree. This tree gives us:
+
+- O(log n) insertions, deletions, and lookups
+- Sorted order traversal (for First/Last, Predecessor/Successor)
+- Efficient word search is handled with a linear scan of all nodes, which is acceptable with a small expected dataset size
+
+Red-Black Trees automatically maintain balance by rotating and coloring nodes that ensure us the longest path is never more than twice as long as the shortest. This keeps operations consistently fast even as the dataset grows.
+
+This structure is ideal for our case where we prioritize ordering and efficient insert/search based on Hawaiian phrases.
+
 ## Work Division
 
 ### Sydney Hashiro
@@ -52,9 +64,7 @@ The `Saying` class implements `Comparable` to allow Unicode-aware sorting by the
 - Search sayings by Hawaiian or English word (substring match)
 
 ## Sample Output
-- Ua ola loko i ke aloha = Love gives life within.
-- I ola no ke kino i ka mā‘ona o ka ‘ōpū = The body enjoys health when the stomach is well filled.
-- I pa‘a ke kino o ke keiki i ka lā‘au = That the body of the child be solidly built by the medicines.
-- Ka lā i ka Mauliola = The sun at the source of life.
-- Mai ka piko o ke po‘o a ka poli o ka wāwae, a l’a ma na kihi ‘ehā o ke kino = From the crown of the head to the soles of the feet, and the four corners of the body.
-- Pū‘ali kalo i ka we ‘ole = Taro, for lack of water, grows misshapen.
+
+Here is what the output looks like:
+
+![Sample Output](output-example.png)
