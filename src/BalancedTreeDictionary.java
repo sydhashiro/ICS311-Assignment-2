@@ -43,4 +43,36 @@ public class BalancedTreeDictionary {
     public TreeSet<Saying> getAllSayings() {
         return sayings;
     }
+
+    // Ka'ili Benavente - implementing meHua and withWord methods
+
+        // Finds all sayings containing the given Hawaiian word
+        public TreeSet<Saying> meHua(String word) {
+            TreeSet<Saying> result = new TreeSet<>();
+            for (Saying saying : sayings) {
+                String[] words = saying.getHawaiian().split("\\s+");
+                for (String w : words) {
+                    if (w.equalsIgnoreCase(word)) {
+                        result.add(saying);
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
+    
+        // Finds all sayings containing the given English word
+        public TreeSet<Saying> withWord(String word) {
+            TreeSet<Saying> result = new TreeSet<>();
+            for (Saying saying : sayings) {
+                String[] words = saying.getEnglish().split("\\s+");
+                for (String w : words) {
+                    if (w.equalsIgnoreCase(word)) {
+                        result.add(saying);
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
 }

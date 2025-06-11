@@ -48,6 +48,6 @@ public class Saying implements Comparable<Saying> {
 
     @Override
     public String toString() {
-        return hawaiian + "=" + english;
+        return hawaiian + " = " + english;
     }
 }
